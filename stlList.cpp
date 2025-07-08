@@ -22,10 +22,26 @@ int main()
     // int integerArray[] = {10, 20, 30};
     vector<int> integerVector = {10, 20, 30};
     list<int> secondList(integerVector.begin(), integerVector.end());
+    // secondList.clear();
 
-    for (int value : secondList)
-    {
-        cout << value << endl;
+    // if (secondList.empty())
+    // {
+    //     cout << "This list is empty" << endl;
+    // }
+    // else
+    // {
+    //     cout << "There is value in the list" << endl;
+    // }
+
+    // for (int value : secondList)
+    // {
+    //     cout << value << endl;
+    // }
+
+    secondList.resize(2);
+
+    for(int value : secondList){
+        cout << value << " ";
     }
 
     return 0;
