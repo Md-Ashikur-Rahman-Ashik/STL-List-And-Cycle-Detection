@@ -32,6 +32,14 @@ void insertAtTail(Node *&head, Node *&tail, int integerValue)
     }
 }
 
+void reverseDoubly(Node *head, Node *tail)
+{
+    for (Node *i = head, *j = tail; i != j && j != i->previousPointer; i = i->nextPointer, j = j->previousPointer)
+    {
+        swap(i->integerValue, j->integerValue);
+    }
+}
+
 void printForward(Node *head)
 {
     Node *tmp = head;
@@ -61,6 +69,7 @@ int main()
         }
     }
 
+    reverseDoubly(head, tail);
     printForward(head);
 
     return 0;
