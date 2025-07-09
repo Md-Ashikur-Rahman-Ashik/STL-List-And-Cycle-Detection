@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    list<int> firstList = {10, 20, 30};
-    list<int> secondList = {100, 200};
-    vector<int> firstVector = {2, 3, 4};
+    list<int> firstList = {10, 40, 20, 40, 40, 30};
+    // list<int> secondList = {100, 200};
+    // vector<int> firstVector = {2, 3, 4};
     // // secondList = firstList;
     // secondList.assign(firstList.begin(), firstList.end());
 
@@ -14,11 +14,23 @@ int main()
     // firstList.pop_back();
 
     // cout << *next(firstList.begin(), 2) << endl;
-    firstList.insert(next(firstList.begin(), 2), firstVector.begin(), firstVector.end());
+    // firstList.insert(next(firstList.begin(), 2), firstVector.begin(), firstVector.end());
     // firstList.pop_front();
-    for (int value : firstList)
+    // firstList.erase(next(firstList.begin(), 1));
+    // replace(firstList.begin(), firstList.end(), 40, 100);
+    // for (int value : firstList)
+    // {
+    //     cout << value << " ";
+    // }
+
+    auto it = find(firstList.begin(), firstList.end(), 200);
+    if (it == firstList.end())
     {
-        cout << value << " ";
+        cout << "Not Found";
+    }
+    else
+    {
+        cout << "Found";
     }
 
     return 0;
